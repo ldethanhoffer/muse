@@ -22,20 +22,20 @@ from kNN import kNN
 from tSNE import plot_tsne
 
 def main():
-    # ================================================
     # Load pre-trained model and remove higher level layers
-    # ================================================
+
     print("Loading VGG19 pre-trained model...")
     base_model = VGG19(weights='imagenet')
     model = Model(input=base_model.input,
                   output=base_model.get_layer('block4_pool').output)
 
-    # ================================================
+
     # Read images and convert them to feature vectors
-    # ================================================
+
     imgs, filename_heads, X = [], [], []
-    path = "db_1"
-    print("Reading images from '{}' directory...\n".format(path))
+    #path = "db_1"
+    path = os.path.join("data", "raw")
+    print("Reading the images from '{}' directory...\n".format(path))
     for f in os.listdir(path):
 
         # Process filename
@@ -62,25 +62,25 @@ def main():
     print("imgs.shape = {}".format(imgs.shape))
     print("X_features.shape = {}\n".format(X.shape))
 
-    # ===========================
+
     # Find k-nearest images to each image
-    # ===========================
+
     n_neighbours = 5 + 1  # +1 as itself is most similar
     knn = kNN()  # kNN model
     knn.compile(n_neighbors=n_neighbours, algorithm="brute", metric="cosine")
     knn.fit(X)
 
-    # ==================================================
+
     # Plot recommendations for each image in database
-    # ==================================================
-    output_rec_dir = os.path.join("output", "rec")
+
+    output_rec_dir = os.path.join("output", "recommendations")
     if not os.path.exists(output_rec_dir):
         os.makedirs(output_rec_dir)
     n_imgs = len(imgs)
     ypixels, xpixels = imgs[0].shape[0], imgs[0].shape[1]
     for ind_query in range(n_imgs):
         # Find top-k closest image feature vectors to each vector
-        print("[{}/{}] Plotting similar image recommendations for: {}".format(ind_query + 1, n_imgs,
+        print("[{}/{}] You may also like the following paintings: {}".format(ind_query + 1, n_imgs,
                                                                               filename_heads[ind_query]))
         distances, indices = knn.predict(np.array([X[ind_query]]))
         distances = distances.flatten()
@@ -95,9 +95,9 @@ def main():
                           x_answer=x_answer_plot[1:],  # remove itself
                           filename=rec_filename)
 
-    # ===========================
+
     # Plot tSNE
-    # ===========================
+
     output_tsne_dir = os.path.join("output")
     if not os.path.exists(output_tsne_dir):
         os.makedirs(output_tsne_dir)

@@ -24,7 +24,7 @@ def plot_query_answer(x_query=None, x_answer=None, filename=None, gray_scale=Fal
         for axis in ['top', 'bottom', 'left', 'right']:
             ax.spines[axis].set_linewidth(4)  # increase border thickness
             ax.spines[axis].set_color('black')  # set to black
-        ax.set_title("query",  fontsize=14)  # set subplot title
+        ax.set_title("you like:",  fontsize=14)  # set subplot title
 
     # Plot answer images
     for j, img in enumerate(x_answer):
@@ -40,7 +40,7 @@ def plot_query_answer(x_query=None, x_answer=None, filename=None, gray_scale=Fal
         for axis in ['top', 'bottom', 'left', 'right']:
             ax.spines[axis].set_linewidth(1)  # set border thickness
             ax.spines[axis].set_color('black')  # set to black
-        ax.set_title("rec %d" % (j+1), fontsize=14)  # set subplot title
+        ax.set_title(filename, fontsize=14)  # set subplot title
 
     if filename == None:
         plt.show()

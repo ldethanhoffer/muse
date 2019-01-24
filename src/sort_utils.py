@@ -49,17 +49,6 @@ def is_unique(vec):
     return (n_vec == n_vec_unique)
 
 
-def main():
-    # Example usage
-    indices = np.array([1, 2, 3, 2, 3, 4, 3, 3, 2, 1, 5], dtype=int)
-    distances = np.array([0.8, 0.5, 0.055, 0.4, 0.5, 0.2, 0.1, 0.8, 0.9, 1.0, 0.05], dtype=float)
-
-    n_neighbors = 4
-    indices, distances = find_topk_unique(indices, distances, n_neighbors)
-
-    print(indices)
-    print(distances)
-
 # Main driver
 if __name__ == "main":
     main()

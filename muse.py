@@ -21,8 +21,11 @@ from sort_utils import find_topk_unique
 from kNN import kNN
 from tSNE import plot_tsne
 
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
 def main():
-    # Load pre-trained model and remove higher level layers
+    #Load the VVg19 model and remove the last layer:
 
     print("Loading VGG19 pre-trained model...")
     base_model = VGG19(weights='imagenet')
@@ -33,7 +36,7 @@ def main():
     # Read images and convert them to feature vectors
 
     imgs, filename_heads, X = [], [], []
-    #path = "db_1"
+
     path = os.path.join("data", "raw")
     print("Reading the images from '{}' directory...\n".format(path))
     for f in os.listdir(path):
@@ -65,7 +68,7 @@ def main():
 
     # Find k-nearest images to each image
 
-    n_neighbours = 5 + 1  # +1 as itself is most similar
+    n_neighbours = 4 + 1  # +1 as itself is most similar
     knn = kNN()  # kNN model
     knn.compile(n_neighbors=n_neighbours, algorithm="brute", metric="cosine")
     knn.fit(X)
@@ -74,19 +77,17 @@ def main():
     # Plot recommendations for each image in database
 
     output_rec_dir = os.path.join("output", "recommendations")
-    if not os.path.exists(output_rec_dir):
-        os.makedirs(output_rec_dir)
+
     n_imgs = len(imgs)
     ypixels, xpixels = imgs[0].shape[0], imgs[0].shape[1]
     for ind_query in range(n_imgs):
-        # Find top-k closest image feature vectors to each vector
-        print("[{}/{}] You may also like the following paintings: {}".format(ind_query + 1, n_imgs,
+        # Find k closest image feature vectors to each vector
+        print("[{}/{}] finding your recommendations: {}".format(ind_query + 1, n_imgs,
                                                                               filename_heads[ind_query]))
         distances, indices = knn.predict(np.array([X[ind_query]]))
         distances = distances.flatten()
         indices = indices.flatten()
         indices, distances = find_topk_unique(indices, distances, n_neighbours)
-
         # Plot recommendations
         rec_filename = os.path.join(output_rec_dir, "{}_rec.png".format(filename_heads[ind_query]))
         x_query_plot = imgs[ind_query].reshape((-1, ypixels, xpixels, 3))
@@ -104,6 +105,12 @@ def main():
     tsne_filename = os.path.join(output_tsne_dir, "tsne.png")
     print("Plotting tSNE to {}...".format(tsne_filename))
     plot_tsne(imgs, X, tsne_filename)
+
+def recommend(movement, number):
+    img =mpimg.imread( "iconic "+ movement+ " paintings-"+ number+ "_rec.png")
+    plt.imshow(img)
+    plt.axis('off')
+    plt.show()
 
 # Driver
 if __name__ == "__main__":

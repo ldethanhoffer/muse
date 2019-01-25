@@ -1,6 +1,8 @@
 """
 
- tSNE.py  (author: Anson Wong / git: ankonzoid)
+ tSNE.py
+
+ plots the t-sne embedding of a set of images for muse
 
 """
 import numpy as np

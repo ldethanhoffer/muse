@@ -1,11 +1,12 @@
 """
 
- similar_images_TL.py  (author: Anson Wong / git: ankonzoid)
+ muse.py
 
- We find similar images in a database by using transfer learning
- via a pre-trained VGG image classifier. We plot the 5 most similar
- images for each image in the database, and plot the tSNE for all
- our image feature vectors.
+Recommend similar paintings given a choice,
+
+Uses transfer learning on the  VGG19 keras model 
+
+code adapted from A. Wong
 
 """
 import sys, os
@@ -106,11 +107,56 @@ def main():
     print("Plotting tSNE to {}...".format(tsne_filename))
     plot_tsne(imgs, X, tsne_filename)
 
-def recommend(movement, number):
-    img =mpimg.imread( "iconic "+ movement+ " paintings-"+ number+ "_rec.png")
-    plt.imshow(img)
-    plt.axis('off')
-    plt.show()
+def recommend():
+print("Loading the VGG19 model")
+    
+    base_model = VGG19(weights='imagenet')
+    
+    model = Model(input=base_model.input,
+                  output=base_model.get_layer('block4_pool').output)
+
+
+    # Read images and convert them to feature vectors
+
+    imgs, filename_heads, X = [], [], []
+
+    path = os.path.join("data", "raw")
+    print("Reading the images from '{}' directory...\n".format(path))
+    for f in os.listdir(path):
+
+        # Process filename
+        filename = os.path.splitext(f)  # filename in directory
+        filename_full = os.path.join(path,f)  # full path filename
+        head, ext = filename[0], filename[1]
+        if ext.lower() not in [".jpg", ".jpeg"]:
+            continue
+
+        # Read image file
+        img = image.load_img(filename_full, target_size=(224, 224))  # load
+        imgs.append(np.array(img))  # image
+        filename_heads.append(head)  # filename head
+
+        # Pre-process for model input
+        img = image.img_to_array(img)  # convert to array
+        img = np.expand_dims(img, axis=0)
+        img = preprocess_input(img)
+        features = model.predict(img).flatten()  # features
+        X.append(features)  # append feature extractor
+
+    X = np.array(X)  # feature vectors
+    imgs = np.array(imgs)  # images
+    print("imgs.shape = {}".format(imgs.shape))
+    print("X_features.shape = {}\n".format(X.shape))
+
+
+    # Find k-nearest images to each image
+
+    n_neighbours = 4 + 1  # +1 as itself is most similar
+    knn = kNN()  # kNN model
+    knn.compile(n_neighbors=n_neighbours, algorithm="brute", metric="cosine")
+    knn.fit(X)
+
+    return recommendations
 
 # Driver
 if __name__ == "__main__":

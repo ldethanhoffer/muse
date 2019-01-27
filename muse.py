@@ -6,7 +6,7 @@ Recommend similar paintings given a choice,
 
 Uses transfer learning on the  VGG19 keras model 
 
-code adapted from A. Wong
+code customized from A. Wong
 
 """
 import sys, os
@@ -20,21 +20,26 @@ from imagenet_utils import preprocess_input
 from plot_utils import plot_query_answer
 from sort_utils import find_topk_unique
 from kNN import kNN
-from tSNE import plot_tsne
+from tsne import plot_tsne
 
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
-def main():
-    #Load the VVg19 model and remove the last layer:
+import random
 
+def main():
+    
+
+    #Load the VVg19 model and remove the last layer for transfer learning
     print("Loading VGG19 pre-trained model...")
+    
     base_model = VGG19(weights='imagenet')
+    
     model = Model(input=base_model.input,
                   output=base_model.get_layer('block4_pool').output)
 
 
-    # Read images and convert them to feature vectors
+    # Read the images and embed into a vector space 
 
     imgs, filename_heads, X = [], [], []
 
@@ -42,32 +47,32 @@ def main():
     print("Reading the images from '{}' directory...\n".format(path))
     for f in os.listdir(path):
 
-        # Process filename
+        # Process the ilename
         filename = os.path.splitext(f)  # filename in directory
         filename_full = os.path.join(path,f)  # full path filename
         head, ext = filename[0], filename[1]
         if ext.lower() not in [".jpg", ".jpeg"]:
             continue
 
-        # Read image file
+        # Read the image
         img = image.load_img(filename_full, target_size=(224, 224))  # load
         imgs.append(np.array(img))  # image
         filename_heads.append(head)  # filename head
 
-        # Pre-process for model input
+        # Pre-process the image
         img = image.img_to_array(img)  # convert to array
         img = np.expand_dims(img, axis=0)
         img = preprocess_input(img)
         features = model.predict(img).flatten()  # features
         X.append(features)  # append feature extractor
 
-    X = np.array(X)  # feature vectors
-    imgs = np.array(imgs)  # images
+    X = np.array(X)  # the vectors
+    imgs = np.array(imgs)  # the images
     print("imgs.shape = {}".format(imgs.shape))
     print("X_features.shape = {}\n".format(X.shape))
 
 
-    # Find k-nearest images to each image
+    # find the closest vectors using kNN:
 
     n_neighbours = 4 + 1  # +1 as itself is most similar
     knn = kNN()  # kNN model
@@ -75,13 +80,14 @@ def main():
     knn.fit(X)
 
 
-    # Plot recommendations for each image in database
+    # Plot the recommendations for each image in database
 
     output_rec_dir = os.path.join("output", "recommendations")
 
     n_imgs = len(imgs)
     ypixels, xpixels = imgs[0].shape[0], imgs[0].shape[1]
     for ind_query in range(n_imgs):
+        
         # Find k closest image feature vectors to each vector
         print("[{}/{}] finding your recommendations: {}".format(ind_query + 1, n_imgs,
                                                                               filename_heads[ind_query]))
@@ -89,7 +95,8 @@ def main():
         distances = distances.flatten()
         indices = indices.flatten()
         indices, distances = find_topk_unique(indices, distances, n_neighbours)
-        # Plot recommendations
+        
+        # Plot the recommendations
         rec_filename = os.path.join(output_rec_dir, "{}_rec.png".format(filename_heads[ind_query]))
         x_query_plot = imgs[ind_query].reshape((-1, ypixels, xpixels, 3))
         x_answer_plot = imgs[indices].reshape((-1, ypixels, xpixels, 3))
@@ -98,7 +105,7 @@ def main():
                           filename=rec_filename)
 
 
-    # Plot tSNE
+    # finally, Plot the t-sne results for the dataset:
 
     output_tsne_dir = os.path.join("output")
     if not os.path.exists(output_tsne_dir):
@@ -107,11 +114,10 @@ def main():
     print("Plotting tSNE to {}...".format(tsne_filename))
     plot_tsne(imgs, X, tsne_filename)
 
-def recommend():
-print("Loading the VGG19 model")
+def get_recommendations():
     
+    print("Loading the VGG19 model")
     base_model = VGG19(weights='imagenet')
-    
     model = Model(input=base_model.input,
                   output=base_model.get_layer('block4_pool').output)
 
@@ -120,7 +126,7 @@ print("Loading the VGG19 model")
 
     imgs, filename_heads, X = [], [], []
 
-    path = os.path.join("data", "raw")
+    path = os.path.join("data", "processed")
     print("Reading the images from '{}' directory...\n".format(path))
     for f in os.listdir(path):
 
@@ -134,7 +140,7 @@ print("Loading the VGG19 model")
         # Read image file
         img = image.load_img(filename_full, target_size=(224, 224))  # load
         imgs.append(np.array(img))  # image
-        filename_heads.append(head)  # filename head
+        filename_heads.append(head) # filename head
 
         # Pre-process for model input
         img = image.img_to_array(img)  # convert to array
@@ -151,11 +157,36 @@ print("Loading the VGG19 model")
 
     # Find k-nearest images to each image
 
-    n_neighbours = 4 + 1  # +1 as itself is most similar
+    n_neighbours = 6 + 1  # +1 as itself is most similar
     knn = kNN()  # kNN model
     knn.compile(n_neighbors=n_neighbours, algorithm="brute", metric="cosine")
     knn.fit(X)
 
+    
+    # Plot the recommendations for each image in database
+
+    output_rec_dir = os.path.join("output", "recommendations")
+
+    n_imgs = len(imgs)
+    ypixels, xpixels = imgs[0].shape[0], imgs[0].shape[1]
+    recommendations = {}
+    for ind_query in range(n_imgs):
+        
+        # Find k closest image feature vectors to each vector
+        print("[{}/{}] finding your recommendations: {}".format(ind_query + 1, n_imgs,
+                                                                              filename_heads[ind_query]))
+        distances, indices = knn.predict(np.array([X[ind_query]]))
+        distances = distances.flatten()
+        indices = indices.flatten()
+        indices, distances = find_topk_unique(indices, distances, n_neighbours)
+        
+        indices = indices[0][1:]
+        wildcard = np.array([random.randrange(1, n_imgs) for _ in range(3)])
+        print(indices)
+        print(wildcard)
+        indices = np.concatenate((indices,wildcard))
+        recommendations.update({ind_query:indices})    
+    
     return recommendations
 
 # Driver

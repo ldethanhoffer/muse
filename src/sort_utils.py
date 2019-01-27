@@ -1,12 +1,11 @@
-"""
 
- sort_utils.py  (author: Anson Wong / github: ankonzoid)
-
-"""
 import numpy as np
 
 """
- Finds the first unique k elements (based on lowest distance) of lists 'indices' and 'distances'
+Finds the first unique k elements (based on lowest distance) of lists 'indices' and 'distances'
+
+courtesy of A. Wong
+
 """
 def find_topk_unique(indices, distances, k):
 

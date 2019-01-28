@@ -163,7 +163,7 @@ def get_recommendations():
     knn.fit(X)
 
     
-    # Plot the recommendations for each image in database
+    # return the recommendations for each painting in the form of a dictionary
 
     output_rec_dir = os.path.join("output", "recommendations")
 
@@ -180,8 +180,8 @@ def get_recommendations():
         indices = indices.flatten()
         indices, distances = find_topk_unique(indices, distances, n_neighbours)
         
-        indices = indices[0][1:]
-        wildcard = np.array([random.randrange(1, n_imgs) for _ in range(3)])
+        indices = indices[0][1:] #remove the first painting (as its obviously the closet one)
+        wildcard = np.array([random.randrange(1, n_imgs) for _ in range(3)]) #(add 3 random paintings in the next suggestion)
         print(indices)
         print(wildcard)
         indices = np.concatenate((indices,wildcard))

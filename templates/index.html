@@ -1,11 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+<html lang='en'>
+	<head>
+		<title>Flask App</title>
+		<style type="text/css">
+			* {
+				font-family: sans-serif;
+			}
+		</style>
+	</head>
 
-    <title>Recommendation Engine</title>
-</head>
-<body>
-    <h1>The recommendation is: {{ recommendation }}</h1>
-</body>
+
+    <body>
+		<h1>Welcome to the TMoma</h1>
+		<form method="post" id="form">
+			<label for="num">Which painting did you like?<br> </label>
+			<input type="text" id="painting_id" name="painting_id" autofocus autocomplete="off">
+			<button>submit</button>
+		</form>
+
+
+
+        <form method="post" id="recommend">
+			<button id="recommend_button"">map my route!</button>
+		</form>
+
+        <p id="recommendations">
+
+
+        </p>
+
+        <p id="square">
+        </p>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js">
+        </script>
+
+        <script>
+
+			var arr = []
+			$('#form').on('submit', function(e){
+				var painting_id= $('#painting_id').val();
+                e.preventDefault();
+				$.ajax({
+					url: 'http://127.0.0.1:5000/square/',
+					data: {'painting_number': painting_id},
+					method: 'POST',
+					success: function(return_value) {
+						$('#painting_id').val('');
+						$('#square').html('you chose: ' + painting_id + '<br><br> here are some other suggestions:  ' + return_value['result'])
+					    arr.push(painting_id);
+					    }
+				});
+			});
+
+
+			$('#recommend').on('click', function(e){
+				e.preventDefault();
+				$.ajax({
+					url: 'http://127.0.0.1:5000/return/',
+					method: 'POST',
+					success: function() {
+						$('#recommendations').html('this is your route through the museum: ' + arr)
+					}
+				});
+			});
+		</script>
+
+
+    </body>
+
+</html>

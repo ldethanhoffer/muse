@@ -1,34 +1,26 @@
-#Import flask functionality:
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, jsonify
 
-# Import the necessary Python modules:
-from get_recommendations import get_recommendations
+database = {0: (0, 0), 1: (10, 1000), 2: (20, 2000), 3: (30, 3000)}
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/square/', methods=['POST'])
+def square():
+    data = database
+    num = float(request.form.get('painting_number', 0))
+    recommendations = data[num]
+    data = {'result': recommendations}
+    data = jsonify(data)
+    return data
 
 
-app =  Flask(__name__)
-
-#@app.route('/', methods=['GET', 'POST'])
-#def recommend():
-#   if request.method == 'POST':
-#        recommendation = get_recommendations(request.form['initial'])
-#    else:
-#        recommendation = get_recommendations()
-#    return render_template('index.html', recommendation = recommendation)
-
-
-
-@app.route('/success/<name>')
-def success(name):
-   return 'welcome %s' % name
-
-@app.route('/login',methods = ['POST', 'GET'])
-def login():
-   if request.method == 'POST':
-      user = request.form['nm']
-      return redirect(url_for('success',name = user))
-   else:
-      user = request.args.get('nm')
-      return redirect(url_for('success',name = user))
+@app.route('/return/', methods = ['Post'])
+def recommend():
+    return 'these are your recommendations'
 
 if __name__ == '__main__':
-   app.run(debug = True)
+    app.run(debug=True)

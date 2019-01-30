@@ -43,7 +43,7 @@ def main():
 
     imgs, filename_heads, X = [], [], []
 
-    path = os.path.join("data", "raw")
+    path = os.path.join("data", "final")
     print("Reading the images from '{}' directory...\n".format(path))
     for f in os.listdir(path):
 
@@ -82,7 +82,7 @@ def main():
 
     # Plot the recommendations for each image in database
 
-    output_rec_dir = os.path.join("output", "recommendations")
+    output_rec_dir = os.path.join("output", "final_recommendations")
 
     n_imgs = len(imgs)
     ypixels, xpixels = imgs[0].shape[0], imgs[0].shape[1]

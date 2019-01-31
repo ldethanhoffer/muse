@@ -3,345 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="876f95ec-94d8-451f-85a1-7c77f5bb5814" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/muse.py" beforeDir="false" afterPath="$PROJECT_DIR$/muse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/visualization-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/visualization-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebook/visualization.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/visualization.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-100_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-10_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-11_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-12_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-1_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-27_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-28_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-29_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-2_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-31_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-32_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-33_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-34_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-35_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-36_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-37_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-38_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-40_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-41_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-42_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-43_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-44_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-45_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-46_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-47_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-48_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-49_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-4_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-51_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-52_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-53_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-54_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-55_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-56_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-57_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-58_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-59_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-60_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-61_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-62_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-63_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-64_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-65_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-66_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-67_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-68_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-69_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-6_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-70_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-71_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-72_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-73_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-74_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-76_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-77_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-78_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-79_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-7_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-80_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-81_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-82_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-83_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-84_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-86_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-87_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-88_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-89_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-8_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-90_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-92_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-93_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-94_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-95_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-96_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-97_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-98_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-99_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic 20th century paintings-9_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-100_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-10_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-11_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-12_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-13_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-14_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-15_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-16_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-17_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-18_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-19_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-1_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-20_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-21_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-22_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-23_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-24_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-25_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-26_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-27_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-28_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-29_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-2_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-30_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-32_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-33_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-34_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-35_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-36_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-37_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-38_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-39_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-3_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-40_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-41_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-42_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-43_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-44_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-45_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-46_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-48_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-49_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-4_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-51_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-52_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-53_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-54_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-55_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-57_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-58_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-5_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-60_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-61_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-62_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-63_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-64_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-65_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-67_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-68_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-69_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-6_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-72_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-73_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-76_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-77_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-78_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-7_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-80_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-81_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-82_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-83_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-84_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-86_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-88_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-89_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-8_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-90_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-91_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-92_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-93_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-94_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-95_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-96_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic expressionist paintings-98_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-100_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-10_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-11_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-12_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-13_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-15_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-16_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-17_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-19_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-20_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-21_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-22_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-23_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-26_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-27_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-28_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-29_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-30_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-31_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-32_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-34_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-35_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-36_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-37_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-39_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-41_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-42_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-43_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-44_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-45_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-47_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-48_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-49_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-4_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-51_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-52_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-53_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-54_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-55_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-56_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-57_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-58_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-59_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-5_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-60_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-61_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-62_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-63_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-66_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-67_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-68_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-69_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-6_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-71_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-72_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-73_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-75_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-76_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-77_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-78_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-79_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-7_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-80_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-81_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-82_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-83_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-84_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-85_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-86_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-88_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-89_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-90_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-91_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-92_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-93_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-94_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-95_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-96_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-97_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic impressionist paintings-99_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-100_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-10_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-11_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-12_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-13_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-14_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-15_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-16_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-17_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-18_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-19_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-1_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-20_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-21_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-22_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-23_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-24_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-25_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-26_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-27_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-28_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-29_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-2_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-30_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-31_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-32_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-33_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-34_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-35_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-36_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-37_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-39_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-3_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-40_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-41_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-42_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-43_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-44_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-45_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-46_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-48_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-49_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-4_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-50_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-51_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-52_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-53_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-54_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-55_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-56_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-57_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-58_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-59_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-5_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-60_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-61_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-62_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-63_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-64_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-66_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-67_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-68_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-69_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-6_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-70_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-71_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-72_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-73_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-74_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-75_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-76_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-77_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-79_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-80_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-81_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-82_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-83_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-84_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-85_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-86_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-87_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-89_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-90_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-91_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-92_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-93_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-94_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-96_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-97_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-99_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/recommendations/iconic modern paintings-9_rec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plot_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/plot_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/ajax-loader.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -365,13 +26,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1252" />
+          <entry key="html" value="1712" />
           <entry key="py" value="1172" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1252" />
+          <entry key="HTML" value="1712" />
           <entry key="Python" value="1172" />
         </counts>
       </usages-collector>
@@ -397,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="108">
+              <caret line="37" column="96" selection-start-line="37" selection-start-column="96" selection-end-line="37" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -420,7 +81,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
+            <state relative-caret-position="2828">
               <caret line="201" column="15" selection-start-line="201" selection-start-column="15" selection-end-line="201" selection-end-column="15" />
             </state>
           </provider>
@@ -492,7 +153,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-81" />
+    <option name="x" value="-101" />
     <option name="y" value="23" />
     <option name="width" value="1366" />
     <option name="height" value="677" />
@@ -512,12 +173,7 @@
             <path>
               <item name="muse" type="b2602c69:ProjectViewProjectNode" />
               <item name="muse" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="muse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="muse" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="muse" type="b2602c69:ProjectViewProjectNode" />
@@ -661,7 +317,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-81" y="23" width="1366" height="677" extended-state="0" />
+    <frame x="-101" y="23" width="1366" height="677" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35120845" />
@@ -728,15 +384,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
+        <state relative-caret-position="2828">
           <caret line="201" column="15" selection-start-line="201" selection-start-column="15" selection-end-line="201" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="108">
+          <caret line="37" column="96" selection-start-line="37" selection-start-column="96" selection-end-line="37" selection-end-column="96" />
         </state>
       </provider>
     </entry>

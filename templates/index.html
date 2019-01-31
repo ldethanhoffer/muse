@@ -18,22 +18,24 @@
 			}
 
 			.painting_grid {
-			max-width:200px;
+			max-width:300px;
 			padding:0%;
 			margin:0%;
 			}
-			.recommendations{
-				display:grid;
-				grid-gap: 0px;
-				grid-template-columns: repeat(3, 1fr);
-
+			.recommendations, #image_results{
+				display:flex;
+				flex-wrap: wrap;
+				margin: 0 auto;
+				width: 900px;
 			}
 		</style>
 	</head>
 
 
     <body>
-		<h1>Welcome to the TMoma</h1>
+		<h1>Muse: your personal museum guide!</h1>
+		<h2>To plan your route, simply enter a painting key you like, Muse then recommends similar paintings</h2>
+		<h2>When you're done, click the plan my route button and Muse gives you your selections!</h2>
 		<form method="post" id="form">
 			<label for="num">Choose a painting:<br> </label>
 			<input type="text" id="painting_id" name="painting_id" autofocus autocomplete="off">
@@ -46,8 +48,11 @@
 			<button id="recommend_button"">map my route!</button>
 		</form>
 
-        <p id="square">
-        </p>
+		<div id="route"></div>
+
+        <div id="square"></div>
+
+		<div id="image_results"></div>
 
         <div class="recommendations">
 
@@ -85,14 +90,16 @@
 						for (x=0; x < return_value['result'].length; x++) {
 						    console.log(return_value['result'][x]);
 
-						    images += '<img class= "painting_div" src="static/img/' + return_value['result'][x] + '.jpg">';
+						    images += '<div class="painting_div"><img src="static/img/' + return_value['result'][x] + '.jpg"></div>';
 
 						}
-						$('#square').html('you chose: ' + painting_id + '<br><br> here are some other suggestions: <br><br> ' + images)
+						$('#square').html('you chose: ' + painting_id + '<br><br> here are some other suggestions:')
+						$('.recommendations').html(images);
 					    arr.push(painting_id);
 					    }
 				});
 			});
+
 
 
 			$('#recommend').on('click', function(e){
@@ -101,7 +108,7 @@
 					url: 'http://127.0.0.1:5000/recommendations/',
 					method: 'POST',
 					success: function() {
-						$('#recommendations').html('this is your route through the museum: ' + arr)
+						$('#route').html('this is your route through the museum: ' + arr)
 					}
 				});
 			});

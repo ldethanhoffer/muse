@@ -18,8 +18,6 @@ def plot_query_answer(x_query=None, x_answer=None, filename=None, gray_scale=Fal
     plt.figure(figsize=(2*n, 4))
 
     # Plot query images
-    #find image numbers:
-    painting_labels= [random.randrange(1, 400) for _ in range(4)]
     for j, img in enumerate(x_query):
         if(j >= n):
             break
@@ -46,9 +44,6 @@ def plot_query_answer(x_query=None, x_answer=None, filename=None, gray_scale=Fal
         for axis in ['top', 'bottom', 'left', 'right']:
             ax.spines[axis].set_linewidth(1)  # set border thickness
             ax.spines[axis].set_color('black')  # set to black
-        
-
-        ax.set_title(painting_labels[j], fontsize=14)  # set subplot title
 
     if filename == None:
         plt.show()

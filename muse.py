@@ -6,7 +6,7 @@ Recommend similar paintings given a choice,
 
 Uses transfer learning on the  VGG19 keras model 
 
-code customized from A. Wong
+code adapted from A. Wong
 
 """
 import sys, os
@@ -126,7 +126,7 @@ def get_recommendations():
 
     imgs, filename_heads, X = [], [], []
 
-    path = os.path.join("data", "processed")
+    path = os.path.join("data", "final")
     print("Reading the images from '{}' directory...\n".format(path))
     for f in os.listdir(path):
 
@@ -173,21 +173,29 @@ def get_recommendations():
     for ind_query in range(n_imgs):
         
         # Find k closest image feature vectors to each vector
-        print("[{}/{}] finding your recommendations: {}".format(ind_query + 1, n_imgs,
+        print("[{}/{}] finding your recommendations for painting {}".format(ind_query + 1, n_imgs,
                                                                               filename_heads[ind_query]))
         distances, indices = knn.predict(np.array([X[ind_query]]))
         distances = distances.flatten()
         indices = indices.flatten()
         indices, distances = find_topk_unique(indices, distances, n_neighbours)
         
-        indices = indices[0][1:] #remove the first painting (as its obviously the closet one)
+        indices = indices[0][1:] #remove the first painting (as it's obviously the closet one)
         wildcard = np.array([random.randrange(1, n_imgs) for _ in range(3)]) #(add 3 random paintings in the next suggestion)
-        print(indices)
-        print(wildcard)
         indices = np.concatenate((indices,wildcard))
-        recommendations.update({ind_query:indices})    
+        indices = [filename_heads[index] for index in indices]
+        recommendations.update({filename_heads[ind_query]:indices})    
     
     return recommendations
+
+def validate(data, i):
+    i = 0
+    for item in data:
+        or_movement = item[i]
+        suggested_movement = data[item][i][0]
+        if or_movement == suggested_movement:
+            i = i + 1
+    return float(i/len(data),1)
 
 # Driver
 if __name__ == "__main__":

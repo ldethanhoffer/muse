@@ -34,18 +34,13 @@
 
     <body>
 		<h1>Muse: your personal museum guide!</h1>
-		<h2>To plan your route, simply enter a painting key you like, Muse then recommends similar paintings</h2>
+		<h2>To plan your route, simply click on a painting you like, Muse then recommends similar paintings</h2>
 		<h2>When you're done, click the plan my route button and Muse gives you your selections!</h2>
-		<form method="post" id="form">
-			<label for="num">Choose a painting:<br> </label>
-			<input type="text" id="painting_id" name="painting_id" autofocus autocomplete="off">
-			<button>submit</button>
-		</form>
 
 
 
         <form method="post" id="recommend">
-			<button id="recommend_button"">map my route!</button>
+			<button id="recommend_button"">plan my route!</button>
 		</form>
 
 		<div id="route"></div>
@@ -59,8 +54,8 @@
 			{% for item in data %}
 
 				<div class="painting_div">
-				<img src="static/img/{{ item }}.jpg" data-painting-id="{{ item }}">
-				<p> {{item}}</p>
+					<img src="static/img/{{ item }}.jpg" data-painting-id="{{ item }}">
+					<p> {{item}}</p>
 				</div>
 
             {% endfor %}
@@ -76,24 +71,23 @@
         <script>
 
 			var arr = []
-			$('#form').on('submit', function(e){
-				var painting_id= $('#painting_id').val();
-                e.preventDefault();
+
+			// when a painting_div inside of recommendations is clicked
+			$('.recommendations').on('click', '.painting_div', function(e) {
+				var painting_id= $(this)
+					.find('img') // look for the img tag
+					.data('paintingId'); // get the data-painting-id attribute
 				$.ajax({
 					url: 'http://127.0.0.1:5000/square/',
 					data: {'painting_number': painting_id},
 					method: 'POST',
 					success: function(return_value) {
-						$('#painting_id').val('');
 						var images = '';
-						console.log(images);
 						for (x=0; x < return_value['result'].length; x++) {
-						    console.log(return_value['result'][x]);
-
-						    images += '<div class="painting_div"><img src="static/img/' + return_value['result'][x] + '.jpg"></div>';
+						    images += '<div class="painting_div"><img src="static/img/' + return_value['result'][x] + '.jpg" data-painting-id="' + return_value['result'][x] + '"><p>' + return_value['result'][x] + '</p></div>';
 
 						}
-						$('#square').html('you chose: ' + painting_id + '<br><br> here are some other suggestions:')
+						$('#square').html('you chose: ' + painting_id + '<br><br> here are some other suggestions:<br><br>')
 						$('.recommendations').html(images);
 					    arr.push(painting_id);
 					    }
@@ -104,13 +98,14 @@
 
 			$('#recommend').on('click', function(e){
 				e.preventDefault();
-				$.ajax({
-					url: 'http://127.0.0.1:5000/recommendations/',
-					method: 'POST',
-					success: function() {
-						$('#route').html('this is your route through the museum: ' + arr)
-					}
-				});
+				var route_images = '';
+				for (x=0; x < arr.length; x++) {
+					route_images += '<div class="painting_div"><img src="static/img/' + arr[x] + '.jpg" data-painting-id="' + arr[x] + '"><p>' + arr[x] + '</p></div>';
+				}
+				$('#square').html('')
+
+				$('#route').html('this is your route through the museum: <br><br>');
+				$('.recommendations').html(route_images);
 			});
 		</script>
 

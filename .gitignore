@@ -1,4 +1,3 @@
-src/kNN.py
 src/imagenet_utils.py
 data/raw
 output

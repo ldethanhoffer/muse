@@ -194,7 +194,6 @@ database = {'e1': ['e20', 'e11', 'e4', 'i31', 'e19', 'r24', 'r42', 'r2', 'r26'],
  'r9': ['r23', 'r48', 'r17', 'r35', 'e41', 'i47', 'r36', 'e2', 'i50']}
 
 port = int(os.environ.get('PORT', 5000))
-app.run(port=port)
 
 first_rec = {'r45': database['r45'],
              'e44': database['e44'],
@@ -226,4 +225,4 @@ def recommend():
     return 'these are your recommendations'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=port)

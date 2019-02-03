@@ -225,4 +225,4 @@ def recommend():
     return 'these are your recommendations'
 
 if __name__ == '__main__':
-    app.run(debug=True, host='museum-muse.herokuapp.com', port=port)
+    app.run(debug=True, host='0.0.0.0', port=port)

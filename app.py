@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-
+import os
 database = {'e1': ['e20', 'e11', 'e4', 'i31', 'e19', 'r24', 'r42', 'r2', 'r26'],
  'e10': ['i30', 'e14', 'e13', 'e47', 'e3', 'r4', 'i34', 'i41', 'p16'],
  'e11': ['e19', 'e4', 'p12', 'i31', 'e20', 'e14', 'p32', 'i43', 'p7'],
@@ -193,6 +193,8 @@ database = {'e1': ['e20', 'e11', 'e4', 'i31', 'e19', 'r24', 'r42', 'r2', 'r26'],
  'r8': ['r22', 'e16', 'r9', 'r20', 'r49', 'e21', 'r44', 'i49', 'r2'],
  'r9': ['r23', 'r48', 'r17', 'r35', 'e41', 'i47', 'r36', 'e2', 'i50']}
 
+port = int(os.environ.get('PORT', 5000))
+app.run(port=port)
 
 first_rec = {'r45': database['r45'],
              'e44': database['e44'],

@@ -2,3 +2,6 @@ src/imagenet_utils.py
 data/raw
 output
 notebooks/.ipynb_checkpoints
+__pychache__
+.idea
+

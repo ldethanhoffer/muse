@@ -1,40 +1,17 @@
 <!DOCTYPE html>
 <html lang='en'>
 	<head>
-		<title>Flask App</title>
-		<style type="text/css">
-			* {
-				font-family: sans-serif;
-			}
-			img {
-			    max-width: 180px;
-			    max-height: 180px;
-			}
-			.painting_div {
-			border-style: solid;
-			height:200px;
-			width:200px;
-			padding:2%;
-			}
+		<title>Muse</title>
+        <link rel="stylesheet" href="static/css/style.css" type="text/css">
 
-			.painting_grid {
-			max-width:300px;
-			padding:0%;
-			margin:0%;
-			}
-			.recommendations, #image_results{
-				display:flex;
-				flex-wrap: wrap;
-				margin: 0 auto;
-				width: 900px;
-			}
-		</style>
 	</head>
 
 
     <body>
-		<h1>Muse: your personal museum guide!</h1>
-		<h2>To plan your route, simply click on a painting you like, Muse then recommends similar paintings</h2>
+
+
+		<h1>Muse: your friendly guide through museums!</h1>
+		<h2>First we'll plan your route: just click on a painting you like and Muse will recommend similar paintings</h2>
 		<h2>When you're done, click the plan my route button and Muse gives you your selections!</h2>
 
 
@@ -55,7 +32,6 @@
 
 				<div class="painting_div">
 					<img src="static/img/{{ item }}.jpg" data-painting-id="{{ item }}">
-					<p> {{item}}</p>
 				</div>
 
             {% endfor %}
@@ -72,8 +48,7 @@
 
 			var arr = []
 
-			// when a painting_div inside of recommendations is clicked:
-
+			// when a painting_div inside of recommendations is clicked
 			$('.recommendations').on('click', '.painting_div', function(e) {
 				var painting_id= $(this)
 					.find('img') // look for the img tag

@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="876f95ec-94d8-451f-85a1-7c77f5bb5814" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebook/.ipynb_checkpoints/visualization-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebook/Untitled.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebook/visualization.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +196,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="509" />
+    <option name="x" value="232" />
     <option name="y" value="23" />
     <option name="width" value="1366" />
     <option name="height" value="677" />
@@ -219,6 +213,11 @@
             <path>
               <item name="muse" type="b2602c69:ProjectViewProjectNode" />
               <item name="muse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="muse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="muse" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="muse" type="b2602c69:ProjectViewProjectNode" />
@@ -384,7 +383,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="509" y="23" width="1366" height="677" extended-state="0" />
+    <frame x="232" y="23" width="1366" height="677" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36706948" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

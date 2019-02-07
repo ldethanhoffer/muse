@@ -2,5 +2,3 @@ src/imagenet_utils.py
 data/raw
 output
 notebooks/.ipynb_checkpoints
-Procfile
-requirements.txt

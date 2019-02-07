@@ -202,8 +202,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="79" />
-    <option name="y" value="33" />
+    <option name="x" value="509" />
+    <option name="y" value="23" />
     <option name="width" value="1366" />
     <option name="height" value="677" />
   </component>
@@ -219,17 +219,6 @@
             <path>
               <item name="muse" type="b2602c69:ProjectViewProjectNode" />
               <item name="muse" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="muse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="muse" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="muse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="muse" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="muse" type="b2602c69:ProjectViewProjectNode" />
@@ -395,7 +384,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="79" y="33" width="1366" height="677" extended-state="0" />
+    <frame x="509" y="23" width="1366" height="677" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36706948" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

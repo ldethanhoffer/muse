@@ -212,6 +212,10 @@ app = Flask(__name__)
 def index():
     return render_template('start.html', data=first_rec)
 
+@app.route('/themed/')
+def themed():
+    return render_template('bootstrap.html', data=first_rec)
+
 @app.route('/square/', methods=['POST'])
 def square():
     num = request.form.get('painting_number')

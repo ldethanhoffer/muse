@@ -218,11 +218,31 @@ def themed():
 
 @app.route('/square/', methods=['POST'])
 def square():
-    num = request.form.get('painting_number')
-    data = {'result': database[num]}
-    data = jsonify(data)
-    return data
+    num = request.form.get('python_name') #get the post data
+    query_result = {'query_result': database[num]}
+    query_result = jsonify(query_result)
+    return query_result
 
+
+@app.route('/get_wing/', methods=['POST'])
+def get_wing():
+    def get_wing_for_single_painting(painting):
+        if painting[0] == 'r':
+            style = 'rennaissance wing'
+        elif painting[0] == 'i':
+            style = 'impressionist wing'
+        elif painting[0] == 'm':
+            style = 'modernist wing'
+        elif painting[0] == 'e':
+            style = 'expressionist wing'
+        elif painting[0] == 'p':
+            style = 'pop art wing'
+        return style
+    query = request.form.get('style')
+    get_wings = [get_wing_for_single_painting(painting) for painting in query]
+    query_result = {'query_result': get_wings}
+    query_result = jsonify(query_result)
+    return {'query_result': query_result}
 
 @app.route('/recommendations/', methods = ['Post'])
 def recommend():

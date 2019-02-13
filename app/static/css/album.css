@@ -56,3 +56,17 @@ footer {
 footer p {
   margin-bottom: .25rem;
 }
+
+
+.media{
+padding:2%;
+border: 1px solid;
+border-radius:5px;
+margin: 2%;
+
+}
+
+.media-object{
+padding-right:50%;
+
+}

@@ -17,8 +17,7 @@
 
     <!-- Bootstrap core JavaScript-->
 
-    <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->
-    <!-- <script>window.jQuery || document.write('<script ../static/js/jquery-slim.min.js"><\/script>')</script>-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="../static/js/holder.min.js"></script>
     <script>
@@ -27,7 +26,6 @@
       });
     </script>
     <script src="../static/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
   </head>
 
@@ -69,69 +67,24 @@
 
 When you're done, click the plan my route button and Muse gives you your selections!</p>
         <p>
+          <form method="post" id = "routeplanner">
           <a href="#" class="btn btn-primary"> plan my route!</a>
-          <a href="#" class="btn btn-secondary">other suggestion!</a>
+          </form>
+          <form method="post">
+            <a href="#" class="btn btn-secondary">other suggestion!</a>
+          </form>
         </p>
       </div>
     </section>
 
+
+  <!-- list the first recommendation grid -->
     <div class="album text-muted">
-      <div class="container">
-
-        <div class="row">
-          <div class="card">
-            <img src="../static/img_resized/e1.jpg" alt="Card image cap">
-          </div>
-          <div class="card">
-            <img src="../static/img_resized/e2.jpg" alt="Card image cap">
-
-          </div>
-          <div class="card">
-            <img src="../static/img_resized/e3.jpg" alt="Card image cap">
-
-          </div>
-
-          <div class="card">
-            <img src="../static/img_resized/e4.jpg" alt="Card image cap">
-
-          </div>
-          <div class="card">
-            <img src="../static/img_resized/e5.jpg"  alt="Card image cap">
-
-          </div>
-          <div class="card">
-            <img src="../static/img_resized/e6.jpg"  alt="Card image cap">
-
-          </div>
-
-          <div class="card">
-            <img src="../static/img_resized/e7.jpg"  alt="Card image cap">
-
-          </div>
-          <div class="card">
-            <img src="../static/img_resized/e8.jpg" alt="Card image cap">
-
-          </div>
-          <div class="card">
-            <img src="../static/img_resized/e9.jpg"  alt="Card image cap">
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-      </div>
-    </div>
-
-
-
-    <div class="album text-muted">
-      <div class="container recommendations">
+      <div class="container recommendation-grid">
           <div class = "row">
             {% for item in data %}
-              <div class="card">
-					<img src="../static/img_resized/{{ item }}.jpg">
+              <div class="card"><!-- add data attribute to pass value in js -->
+					<img src="../static/img_resized/{{ item }}.jpg" data-painting-id="{{ item }}">
               </div>
             {% endfor %}
           </div>
@@ -145,88 +98,56 @@ When you're done, click the plan my route button and Muse gives you your selecti
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.6.0/holder.js"></script>
 <script src="https://unpkg.com/bootstrap-table@1.13.4/dist/bootstrap-table.min.js"></script>
 
-<script>
-  var $table = $('#table')
-
-  $(function() {
-    $table.bootstrapTable({
-      data: [{
-        name: 'Name 1'
-      }, {
-        name: 'Name 2'
-      }, {
-        name: 'Name 3'
-      }, {
-        name: 'Name 4'
-      }, {
-        name: 'Name 5'
-      }]
-    })
-  })
-
-  function imageFormatter() {
-    return '<img src="holder.js/100x150">'
-  }
-
-  function actionFormatter() {
-    return '<i class="glyphicon glyphicon-heart"></i> <i class="glyphicon glyphicon-remove"></i>'
-  }
-</script>
-
-
-
-<table
-  id="table"
-  data-show-header="true"
-  data-classes="table table-hover table-no-bordered">
-  <thead>
-    <tr>
-      <th data-field="image" data-formatter="imageFormatter">Image</th>
-      <th data-field="name">Name</th>
-      <th data-field="action" data-formatter="actionFormatter">Action</th>
-    </tr>
-  </thead>
-</table>
-
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-lg-7 result-grid">
+			<ul class="media-list main-list">
+			</ul>
+		</div>
+      </div>
+    </div>
         <script>
-
 			var arr = []
 
-			// when a card inside of recommendations is clicked
-			$('.recommendations').on('click', '.card', function(e) {
-				var painting_id= $(this)
+			// when a card inside of recommendation-grid is clicked
+			$('.recommendation-grid').on('click', '.card', function(e) {
+				var painting_id=
+				  $(this) // $(this) is the card element
 					.find('img') // look for the img tag
-					.data('paintingId'); // get the data-painting-id attribute
+					.data('paintingId'); // get the data-painting-id attribute from the card element
 				$.ajax ({
 					url: '/square/',
-					data: {'painting_number': painting_id},
+					data: {'python_name': painting_id},
 					method: 'POST',
-					success: function(return_value) {
+					success: function(return_value) { // return value is the result of the AJAX call as a dictionary of the form {'query_result: suggested paintings}
 						var images = '';
-						for (x=0; x < return_value['result'].length; x++) {
-						    images += '<div class="painting_div"><img src="static/img/' + return_value['result'][x] + '.jpg" data-painting-id="' + return_value['result'][x] + '"><p>' + return_value['result'][x] + '</p></div>';
+						for (x=0; x < return_value['query_result'].length; x++) {
+						    images += '<div class="card"><img src="../static/img_resized/' + return_value['query_result'][x] + '.jpg" data-painting-id="' + return_value['query_result'][x] + '"></div>';
 
 						}
-
-						$('#square').html('you chose: ' + painting_id + '<br><br> here are some other suggestions:<br><br>')
-						$('.recommendations').html(images);
+						$('.recommendation-grid').html("<div class = row>" + images + "</div>");
 					    arr.push(painting_id);
-					    }
+					 }
 				});
 			});
 
 
 
-			$('#recommend').on('click', function(e){
+			$('#routeplanner').on('click', function(e){
 				e.preventDefault();
-				var route_images = '';
-				for (x=0; x < arr.length; x++) {
-					route_images += '<div class="card"><img src="../static/img_resized/' + arr[x] + '.jpg" data-painting-id="' + arr[x] + '"><p>' + arr[x] + '</p></div>';
-				}
-				$('#square').html('')
-
-				$('#route').html('this is your route through the museum: <br><br>');
-				$('.recommendations').html(route_images);
+                $.ajax ({
+				        url: '/get_wing/',
+				        data: {'style' : arr},
+				        method:'POST',
+				        success: function(return_value) {// return value is the result of the AJAX call as dictionary {'query result': wings}
+				        var route_images = '';
+				            for (x=0; x < arr.length; x++) {
+                                route_images += '<li class="media"><a class="pull-left" ><img class="media-object" src="../static/img_thumbnails/' + arr[x] + '.jpg"></a><div class="media-body"><h4 class="media-heading">Lorem ipsum dolor asit amet</h4><p class="by-author">Location: arr[x]</p></div></li>'
+                            }
+                            $('.recommendation-grid').html('');
+				            $('.result-grid').html(route_images);
+				        }
+				 });
 			});
 		</script>
 
@@ -238,24 +159,5 @@ When you're done, click the plan my route button and Muse gives you your selecti
         <p>Built using a Keras ConvNet and deployed using Flask on Heroku</p>
       </div>
     </footer>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script ../static/js/jquery-slim.min.js"><\/script>')</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="../static/js/holder.min.js"></script>
-    <script>
-      $(function () {
-        Holder.addTheme("thumb", { background: "#55595c", foreground: "#eceeef", text: "Thumbnail" });
-      });
-    </script>
-    <script src="../static/js/bootstrap.min.js"></script>
   </body>
 </html>

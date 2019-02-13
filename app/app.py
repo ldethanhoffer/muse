@@ -227,22 +227,28 @@ def square():
 @app.route('/get_wing/', methods=['POST'])
 def get_wing():
     def get_wing_for_single_painting(painting):
+        wing =''
         if painting[0] == 'r':
-            style = 'rennaissance wing'
+            wing = 'rennaissance wing'
         elif painting[0] == 'i':
-            style = 'impressionist wing'
+            wing = 'impressionist wing'
         elif painting[0] == 'm':
-            style = 'modernist wing'
+            wing = 'modernist wing'
         elif painting[0] == 'e':
-            style = 'expressionist wing'
+            wing = 'expressionist wing'
         elif painting[0] == 'p':
-            style = 'pop art wing'
-        return style
+            wing = 'pop art wing'
+        return wing
     query = request.form.get('style')
-    get_wings = [get_wing_for_single_painting(painting) for painting in query]
-    query_result = {'query_result': get_wings}
-    query_result = jsonify(query_result)
-    return {'query_result': query_result}
+    list =[]
+    for painting in query:
+        print(painting)
+        wing  = get_wing_for_single_painting(painting)
+        if wing != '':
+            list.append(wing)
+    print(list)
+    list = jsonify(list)
+    return list
 
 @app.route('/recommendations/', methods = ['Post'])
 def recommend():

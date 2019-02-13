@@ -119,7 +119,7 @@ When you're done, click the plan my route button and Muse gives you your selecti
 					url: '/square/',
 					data: {'python_name': painting_id},
 					method: 'POST',
-					success: function(return_value) { // return value is the result of the AJAX call as a dictionary of the form {'query_result: suggested paintings}
+					success: function(return_value) { // return value is the result of the AJAX call as a dictionary of the form {'query_result': suggested paintings}
 						var images = '';
 						for (x=0; x < return_value['query_result'].length; x++) {
 						    images += '<div class="card"><img src="../static/img_resized/' + return_value['query_result'][x] + '.jpg" data-painting-id="' + return_value['query_result'][x] + '"></div>';
@@ -137,16 +137,17 @@ When you're done, click the plan my route button and Muse gives you your selecti
 				e.preventDefault();
                 $.ajax ({
 				        url: '/get_wing/',
-				        data: {'style' : arr},
+				        data: {'style' : JSON.stringify(arr)},
 				        method:'POST',
-				        success: function(return_value) {// return value is the result of the AJAX call as dictionary {'query result': wings}
-				        var route_images = '';
-				            for (x=0; x < arr.length; x++) {
-                                route_images += '<li class="media"><a class="pull-left" ><img class="media-object" src="../static/img_thumbnails/' + arr[x] + '.jpg"></a><div class="media-body"><h4 class="media-heading">Lorem ipsum dolor asit amet</h4><p class="by-author">Location: arr[x]</p></div></li>'
+				        success: function(return_value) {// return value is the result of the AJAX call as list
+                            console.log(return_value)
+                            var route_images = '';
+                            for (x=0; x < arr.length; x++) {
+                                route_images += '<li class="media"><a class="pull-left" ><img class="media-object" src="../static/img_thumbnails/' + arr[x] + '.jpg"></a><div class="media-body"><h4 class="media-heading"> " return_value[x] " </h4><p class="by-author">Location: arr[x]</p></div></li>'
                             }
-                            $('.recommendation-grid').html('');
-				            $('.result-grid').html(route_images);
-				        }
+                            $('.album').remove();
+                            $('.result-grid').html(route_images);
+                        }
 				 });
 			});
 		</script>

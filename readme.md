@@ -18,9 +18,11 @@ https://github.com/ldethanhoffer/muse
 ```
 
 
-## Overview
+## Background
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
+Museums are big business: in Canada alone they generate 25.b$/y, empoy 37.000 people and have 54m customers/y
+
+However, there is a clear decline in population: Over the span of 2 decades they have seen  dcline of 12% among the -44 demographic. What's more 
 
 _For more examples and usage, please refer to the [Wiki][wiki]._
 

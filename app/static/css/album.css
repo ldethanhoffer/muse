@@ -63,13 +63,12 @@ padding:2%;
 border: 1px solid;
 border-radius:5px;
 margin: 2%;
-
 }
 
-.media-object{
-padding-right:50%;
-
+.media-body{
+margin-left:4%;
 }
+
 
 #routeplanner, #suggestor{
 }

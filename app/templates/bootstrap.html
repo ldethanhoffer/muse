@@ -66,14 +66,14 @@
         <p class="lead text-muted">To plan your route, simply click on a painting you like, Muse then recommends similar paintings
 
 When you're done, click the plan my route button and Muse gives you your selections!</p>
-        <p>
-
-          <a href="#" class="btn btn-primary"> <form method="post" id = "routeplanner">plan my route!</form> </a>
 
 
-          <a href="#" class="btn btn-secondary"> <form method="post" id = "suggestor">other suggestion!</form></a>
+          <a href="#" class="btn btn-primary" id="routeplanner">plan my route!</a>
 
-        </p>
+
+          <a href="#" class="btn btn-secondary" id="suggestor">other suggestion!</a>
+
+
       </div>
     </section>
 
@@ -100,7 +100,7 @@ When you're done, click the plan my route button and Muse gives you your selecti
 
     <div class="container">
       <div class="row">
-        <div class="col-md-7 col-lg-7 result-grid">
+        <div class="col-md-7 col-lg-11 result-grid">
 			<ul class="media-list main-list">
 			</ul>
 		</div>
@@ -143,7 +143,16 @@ When you're done, click the plan my route button and Muse gives you your selecti
                             console.log(return_value)
                             var route_images = '';
                             for (x=0; x < arr.length; x++) {
-                                route_images += '<li class="media"><a class="pull-left" ><img class="media-object" src="../static/img_thumbnails/' + arr[x] + '.jpg"></a><div class="media-body"><h4 class="media-heading"> " return_value[x] " </h4><p class="by-author">Location: arr[x]</p></div></li>'
+                                route_images += '\
+                                <li class="media">\
+                                  <a class="pull-left" id="result-painting" >\
+                                    <img class="media-object" src="../static/img_thumbnails/' + arr[x] + '.jpg">\
+                                  </a>\
+                                  <div class="media-body">\
+                                    <h4 class="media-heading"> ' + return_value[x] + ' </h4>\
+                                    <p class="by-author">Location: ' + arr[x] + '</p>\
+                                  </div>\
+                                </li>';
                             }
                             $('.album').remove();
                             $('.result-grid').html(route_images);

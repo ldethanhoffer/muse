@@ -1,123 +1,74 @@
-.cell {
-    width: 80px;
-    height: 80px;
-    text-align: center;
-    vertical-align: center;
-    transition: background-color 0.5s ease;
-    font-size: 50px;
-    font-family: Aria, Helvetica, sans-serif;
-    font-weight: bold;
-    border: 2px solid #ddd;
+body {
+  min-height: 75rem; /* Can be removed; just added for demo purposes */
 }
 
-.board {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    overflow: hidden;
-    width: 250px;
-    height: 250px;
+.navbar {
+  margin-bottom: 0;
 }
 
-.cell:hover {
-    cursor: pointer;
-    background-color: orange;
+.jumbotron {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-bottom: 0;
+  background-color: #fff;
 }
 
-.inactive:hover {
-    cursor: default;
-    background-color: inherit;
+.jumbotron p:last-child {
+  margin-bottom: 0;
 }
 
-#loader {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    top: 125px;
+.jumbotron-heading {
+  font-weight: 300;
 }
 
-#loading-screen {
-    background-color: gray;
-    opacity: 0.075;
-    height: 100%;
-    width: 250px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 20;
+.jumbotron .container {
+  max-width: 40rem;
 }
 
-.choice {
-    width: 125px;
+.album {
+  min-height: 50rem; /* Can be removed; just added for demo purposes */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f7f7f7;
 }
 
-.winning {
-    background-color: #2C92E1;
+.card {
+  float: left;
+  width: 33.333%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
 }
 
-.winning:hover {
-    background-color: #6BB2EA;
+.card > img {
+  margin-bottom: .75rem;
 }
 
-.btn {
-    background-color: #2C92E1 !important;
+.card-text {
+  font-size: 85%;
 }
 
-.btn:hover {
-    background-color: #6BB2EA !important;
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-.right-padding {
-    padding-right: 25px;
-}
-
-@media (max-width: 600px){
-    html, body {
-      font-size: 130%;
-    }
-}
-
-
-img {
-	max-width: 180px;
-	max-height: 180px;
-}
-.painting_div {
-	border-style: solid;
-	height:200px;
-	width:200px;
-	padding:2%;
-}
-
-.painting_grid {
-    max-width:300px;
-	padding:0%;
-	margin:0%;
-}
-.recommendations, #image_results{
-	display:flex;
-	flex-wrap: wrap;
-	margin: 0 auto;
-	width: 900px;
-}
-
-
-.main-list {
-	padding-left: .5em;
-}
-
-.main-list .media {
-	padding-bottom: 1.1em;
-	border-bottom: 1px solid #e8e8e8;
+footer p {
+  margin-bottom: .25rem;
 }
 
 
 .media{
+padding:2%;
+border: 1px solid;
+border-radius:5px;
+margin: 2%;
+}
+
+.media-body{
+margin-left:4%;
+}
 
 
+#routeplanner, #suggestor{
 }

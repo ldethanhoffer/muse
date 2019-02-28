@@ -210,7 +210,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('start.html', data=first_rec)
+    return render_template('index.html', data=first_rec)
 
 @app.route('/themed/')
 def themed():
